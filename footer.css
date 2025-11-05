@@ -1,0 +1,145 @@
+footer {
+  font-family: Arial, sans-serif;
+  color: #6b7280;
+  background-color: #f9fafb;
+  padding: 2rem 1rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  flex: 1 1 250px;
+  text-align: center;
+  max-width: 250px;
+}
+
+.footer-brand .brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.icon-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.25rem;
+  background-color: #6366f1;
+  border-radius: 50%;
+  stroke: white;
+}
+
+.brand-name {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.brand-description {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-links-wrapper {
+  flex: 3 1 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-links {
+  min-width: 150px;
+}
+
+.footer-links h2 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links ul li a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.footer-links ul li a:hover {
+  color: #111827;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: #e5e7eb;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #4b5563;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #6b7280;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:hover {
+  color: #111827;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}

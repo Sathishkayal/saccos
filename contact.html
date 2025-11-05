@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="contact.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us Animated Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+            <script type="text/javascript">
+              (function() {
+              emailjs.init("Z6mfpvJZ7CM4xKJAf");
+              })(); 
+            </script>
+            <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <style>
+      /* Basic reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      color: #1e40af;
+    }
+
+    /* Navbar container */
+    nav {
+      background-color: #121821; /* dark background */
+      padding: 12px 20px;
+    }
+
+    /* Flex container for nav links */
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      justify-content: center; /* center nav items */
+    }
+
+    /* Nav links */
+    .nav-list li a {
+      text-decoration: none;
+      color: #e6edf3;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover styles */
+    .nav-list li a:hover,
+    .nav-list li a:focus {
+      background-color: #5b9cff;
+      color: white;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-list" role="navigation">
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Our Team</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Background floating shapes -->
+  <div class="bg-shape bg-shape1"></div>
+  <div class="bg-shape bg-shape2"></div>
+
+  <section class="section-center">
+    <div class="container">
+      <div class="header">
+        <h1 class="title">Contact Us</h1>
+        <p class="subtitle">We'd love to hear from you — send your request and we’ll respond soon!</p>
+      </div>
+
+      <!-- 3D Tilt container -->
+      <div id="tilt-container" class="form-card">
+        <form autocomplete="off" class="form">
+          <div class="row">
+            <div class="input-group">
+              <input type="text" id="name" name="name" placeholder=" " required />
+              <label for="name">Name</label>
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" name="email" placeholder=" " required />
+              <label for="email">Email</label>
+            </div>
+          </div>
+
+          <div class="input-group full-width">
+            <textarea id="message" name="message" placeholder=" " required rows="5"></textarea>
+            <label for="message">Message</label>
+          </div>
+
+          <div class="button-wrapper">
+            <!-- <button type="submit" class="btn" onclick="sendemail()">Schedule Consultation</button> -->
+             <button type="submit" class="btn">Schedule Consultation</button>
+
+          </div>
+
+          <div class="contact-info">
+            <a href="mailto:saccoinfotech@gmail.com" class="email-link">saccoinfotech@gmail.com</a>
+            <p>+91 9080250913<br />Kumaramangalam,Tiruchengode,Namakkal 637 205</p>
+            <div class="social-icons">
+              <a href="#" title="Facebook" class="social-icon bg-indigo">FB</a>
+              <a href="#" title="Twitter" class="social-icon bg-blue">TW</a>
+              <a href="#" title="Instagram" class="social-icon bg-pink">IG</a>
+              <a href="#" title="WhatsApp" class="social-icon bg-green">WA</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>
+//     function sendemail(){
+
+// 	var email=document.getElementById("email").value;
+// 	var from_name=document.getElementById("name").value;
+// 	var message=document.getElementById("message").value;
+
+// 	var templateParams = {
+//         email: email,
+//         to_name: name,
+// 		message: message
+//       };
+
+//       emailjs.send('service_pom9trl', 'template_0gtvt2t', templateParams)
+//   .then(function(response) {
+//      console.log('SUCCESS!', response.status, response.text);
+//      window.alert("Sent successfully!");
+     
+//   })
+
+     
+// }
+        
+     
+  </script>
+
+  <script src="contact.js"></script>
+</body>
+  <!-- Existing content of your page -->
+
+  <!-- Add footer here -->
+   <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-logo" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="brand-name">Sacco</span>
+        </a>
+        <p class="brand-description">
+          Your vision our design
+        </p>
+      </div>
+      <div class="footer-links-wrapper">
+        <div class="footer-links">
+          <h2>Products</h2>
+          <ul>
+            <li><a href="#">First Link</a></li>
+            <li><a href="#">Second Link</a></li>
+            <li><a href="#">Third Link</a></li>
+            <li><a href="#">Fourth Link</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>Courses</h2>
+          <ul>
+            <li><a href="#">Photoshop & Basics</a></li>
+            <li><a href="#">Video Editing</a></li>
+            <li><a href="#">Python Programming</a></li>
+            <li><a href="#">Web Designing</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="#">Webpage Creating</a></li>
+            <li><a href="#">Graphic Designing</a></li>
+            <li><a href="#">Photo & Video Editing</a></li>
+            <li><a href="#">Mini Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>Our Team</h2>
+          <ul>
+            <li><a href="#">Sathish Kumar</a></li>
+            <li><a href="#">Mageshkanna</a></li>
+            <li><a href="#">Santhiya</a></li>
+            <li><a href="#">Yamuna</a></li>
+            <li><a href="#">Nandhini Devi</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © 2025 Sacco —
+        <a href="mailto:saccoinfotech@gmail.com" target="_blank">saccoinfotech@gmail.com</a>
+        | Phone: +91 9080250913
+      </p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="icon" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+</html>

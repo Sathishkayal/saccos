@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(1, 1, 19);
+}
+h1{
+    text-align: center;
+    color: palevioletred;
+}
+p{
+    color:white;
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+}
+.one{
+    text-align: center;
+    background-color:rgb(3, 3, 61);
+    color: skyblue;
+    padding: 7px;
+    border-radius: 50px;
+}
+.two{
+    background-color: rgb(5, 2, 54);
+    opacity: 20%;
+    border:solid,white;
+    padding: 7px;
+    width: 230px;
+    height:100px;
+    color: white;
+    padding-top:60px ;
+    padding-bottom: none;
+}
+
+.three{
+  background-color: rgb(5, 2, 54);
+    opacity: 20%;
+    border:solid,white;
+    padding: 7px;
+    width: 230px;
+    height:100px;
+    color: white;
+    padding-top:60px ;
+    padding-bottom: none;
+
+}
+.four{
+ background-color: rgb(5, 2, 54);
+    opacity: 20%;
+    border:solid,white;
+    padding: 7px;
+    width: 230px;
+    height:100px;
+    color: white;
+    padding-top:60px ;
+    padding-bottom: none; 
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    justify-content: center;
+}

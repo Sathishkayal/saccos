@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
+
+:root {
+  --clr-blue: #1890ff;
+  --clr-green: #01c3a8;
+  --clr-orange: #ffb741;
+  --clr-red: #a63d2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #232228;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+section {
+  width: 100%;
+  max-width: 50em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.25rem;
+  align-items: center;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* Card base styles */
+.card {
+  position: relative;
+  max-width: 20rem;
+  min-height: 20rem;
+  width: 90%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  box-shadow: 0.063em 0.75em 1.563em rgba(0, 0, 0, 0.78);
+  border-radius: 2.25rem;
+  color: #fff;
+  background: #151419;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2.25rem;
+  z-index: -1;
+  border: 0.155rem solid transparent;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.card-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8em 0.5em 0 1.5em;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.card-header svg {
+  color: #fff;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.card-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 0.7em 1.25em 0.5em 1.5em;
+  transform: translate(-50%, -50%);
+}
+
+.card-body h3 {
+  font-size: 1.375rem;
+  margin-top: 0.625em;
+  margin-bottom: 0.188em;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.card-body p {
+  color: #ddd;
+  font-size: 1rem;
+  letter-spacing: 0.031rem;
+}
+
+.progress {
+  margin-top: 0.938rem;
+  text-align: left;
+}
+
+.progress span:first-of-type {
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  margin-bottom: 0.313rem;
+}
+
+.progress span:last-of-type {
+  text-align: right;
+  color: #fff;
+  display: block;
+  margin-top: 0.313rem;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  background: #363636;
+  height: 0.313rem;
+  border-radius: 3.125rem;
+  display: block;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3.125rem;
+  display: block;
+  width: 0; /* overridden in color classes */
+}
+
+/* Card footer */
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-top: 1px solid #292929;
+  background: #151419;
+  border-bottom-left-radius: 2.25rem;
+  border-bottom-right-radius: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7em 1.25em 0.5em 1.5em;
+  align-items: center;
+}
+
+.card-footer ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-footer ul li {
+  margin-right: -0.625rem;
+}
+
+.card-footer ul li img {
+  border-radius: 50%;
+  width: 1.875rem;
+  height: 1.875rem;
+  object-fit: cover;
+  border: 2px solid #151419;
+}
+
+.btn-add {
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-add svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.btn-countdown {
+  background: #222127;
+  color: #fff;
+  border-radius: 2em;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* color modifiers */
+.card.green {
+  background: radial-gradient(
+    ellipse at right top,
+    #107667ed 0%,
+    #151419 47%,
+    #151419 100%
+  );
+}
+
+.card.green::before {
+  background: linear-gradient(
+    45deg,
+    #232228,
+    #232228,
+    #232228,
+    #232228,
+    var(--clr-green)
+  ) border-box;
+}
+
+.card.green .btn-add {
+  background: var(--clr-green);
+}
+
+.card.green .progress-bar::after {
+  width: 90%;
+  background: var(--clr-green);
+}
+
+.card.green .btn-countdown:hover {
+  background: var(--clr-green);
+}
+
+.card.blue {
+  background: radial-gradient(
+    ellipse at right top,
+    #00458f8f 0%,
+    #151419 45%,
+    #151419 100%
+  );
+}
+
+.card.blue::before {
+  background: linear-gradient(
+    45deg,
+    #232228,
+    #232228,
+    #232228,
+    #232228,
+    var(--clr-blue)
+  ) border-box;
+}
+
+.card.blue .btn-add {
+  background: var(--clr-blue);
+}
+
+.card.blue .progress-bar::after {
+  width: 20%;
+  background: var(--clr-blue);
+}
+
+.card.blue .btn-countdown:hover {
+  background: var(--clr-blue);
+}
+
+.card.orange {
+  background: radial-gradient(
+    ellipse at right top,
+    #ffb74194 0%,
+    #151419 47%,
+    #151419 100%
+  );
+}
+
+.card.orange::before {
+  background: linear-gradient(
+    45deg,
+    #232228,
+    #232228,
+    #232228,
+    #232228,
+    var(--clr-orange)
+  ) border-box;
+}
+
+.card.orange .btn-add {
+  background: var(--clr-orange);
+}
+
+.card.orange .progress-bar::after {
+  width: 30%;
+  background: var(--clr-orange);
+}
+
+.card.orange .btn-countdown:hover {
+  background: var(--clr-orange);
+}
+
+.card.red {
+  background: radial-gradient(
+    ellipse at right top,
+    #a63d2a82 0%,
+    #151419 47%,
+    #151419 100%
+  );
+}
+
+.card.red::before {
+  background: linear-gradient(
+    45deg,
+    #232228,
+    #232228,
+    #232228,
+    #232228,
+    var(--clr-red)
+  ) border-box;
+}
+
+.card.red .btn-add {
+  background: var(--clr-red);
+}
+
+.card.red .progress-bar::after {
+  width: 50%;
+  background: var(--clr-red);
+}
+
+.card.red .btn-countdown:hover {
+  background: var(--clr-red);
+}
+
+/* Responsive styles */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  section {
+    max-width: 90%;
+    gap: 2.5rem;
+  }
+  .card {
+    max-width: 18rem;
+    min-height: 18rem;
+  }
+  .card-body h3 {
+    font-size: 1.1rem;
+  }
+  .card-body p {
+    font-size: 0.9rem;
+  }
+  .btn-countdown {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  section {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+    padding: 2rem 1rem;
+  }
+  .card {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 1.5rem 1rem 2rem;
+  }
+  .card-header,
+  .card-footer,
+  .card-body {
+    position: relative;
+    transform: none;
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+  .card-body h3 {
+    font-size: 1.25rem;
+  }
+  .card-body p {
+    font-size: 1rem;
+  }
+  .progress span:first-of-type,
+  .progress span:last-of-type {
+    text-align: left;
+  }
+  .progress-bar {
+    height: 0.4rem;
+  }
+  .btn-countdown {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+    margin-top: 1rem;
+  }
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .card-footer ul {
+    margin-bottom: 0.5rem;
+  }
+  .btn-add {
+    margin-left: 0;
+  }
+}
+section {
+  width: 100%;
+  max-width: 50em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.25rem;
+  align-items: center;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 10;
+
+  /* 3D perspective for children */
+  perspective: 1000px;
+
+  /* Light 3D style background */
+  background: radial-gradient(circle at center, #2c2a2f 0%, #1a191d 60%, #151419 100%);
+  overflow: visible;
+}
+
+/* 3D Card tilt */
+.card {
+  position: relative;
+  max-width: 20rem;
+  min-height: 20rem;
+  width: 90%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.7),
+    0 6px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 2.25rem;
+  color: #fff;
+  background: #151419;
+
+  /* Preserve children in 3D space */
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card rotation on hover */
+.card:hover {
+  transform: rotateY(12deg) rotateX(8deg) translateZ(15px);
+  box-shadow:
+    0 20px 30px rgba(0, 0, 0, 0.8),
+    0 10px 12px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+/* Subtle layered lighting with pseudo elements for depth */
+section::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255 255 255 / 0.15) 0%, transparent 80%);
+  filter: blur(80px);
+  z-index: 5;
+  pointer-events: none;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 100px;
+  height: 100px;
+  background: rgba(29, 170, 148, 0.2);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 5;
+  pointer-events: none;
+}
+body {
+  background: linear-gradient(135deg, #ffffff, #e6e6e6);
+  /* or for a more subtle radial gradient */
+  /* background: radial-gradient(circle at center, #ffffff 0%, #e6e6e6 100%); */
+}
+
+section {
+  background: radial-gradient(circle at center, #ffffff 0%, #f0f0f0 60%, #e0e0e0 100%);
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0); /* white gradient */
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+section {
+  width: 100%;
+  max-width: 50em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.25rem;
+  align-items: center;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 10;
+
+  /* 3D perspective for children */
+  perspective: 1000px;
+
+  /* Light 3D style background */
+  background: radial-gradient(circle at center, #ffffff, #f9f9f9 60%, #f0f0f0 100%);
+  overflow: visible;
+}
